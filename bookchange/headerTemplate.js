@@ -17,5 +17,27 @@ if (Meteor.isClient) {
     });
 
 
+    Template.headerTemplate.events({
+        'click .find': function (event) {
+            event.preventDefault();
+            Session.set("activeMenu", "searchClass");
+            return false;
+        },
+        'click .all': function (event) {
+            event.preventDefault();
+            Session.set("activeMenu", "allClass");
+            return false;
+        },
+        'click .my': function (event) {
+            event.preventDefault();
+            Session.set("activeMenu", "myClass");
+            return false;
+        },
+        'click .contact': function (event) {
+            event.preventDefault();
+            Session.set("activeMenu", "contactClass");
+            return false;
+        },
+    });
 
 }

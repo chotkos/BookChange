@@ -12,13 +12,13 @@
             <div class="collapse navbar-collapse">
                 {{#if currentUser}}
                 <ul class="nav navbar-nav">
-                    <li class="{{searchClass}}"><a id="find">Search</a>
+                    <li class="{{searchClass}} find"><a href="#find">Search</a>
                     </li>
-                    <li class="{{allClass}}"><a id="my">All books</a>
+                    <li class="{{allClass}} all"><a href="#all">All books</a>
                     </li>
-                    <li class="{{myClass}}"><a id="my">My books</a>
+                    <li class="{{myClass}} my"><a href="#my">My books</a>
                     </li>
-                    <li class="{{contactClass}}"><a id="contact">About</a>
+                    <li class="{{contactClass}} contact"><a href="#contact">About</a>
                     </li>
                 </ul>
                 {{/if}}
