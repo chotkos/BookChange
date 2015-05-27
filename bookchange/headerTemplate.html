@@ -1,0 +1,33 @@
+<template name="headerTemplate">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#main">BookChange</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                {{#if currentUser}}
+                <ul class="nav navbar-nav">
+                    <li class="{{searchClass}}"><a id="find">Search</a>
+                    </li>
+                    <li class="{{allClass}}"><a id="my">All books</a>
+                    </li>
+                    <li class="{{myClass}}"><a id="my">My books</a>
+                    </li>
+                    <li class="{{contactClass}}"><a id="contact">About</a>
+                    </li>
+                </ul>
+                {{/if}}
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="login">{{> loginButtons  align="right"}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</template>

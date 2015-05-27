@@ -1,0 +1,42 @@
+<template name="myTemplate">
+    {{#if isActive}}
+    <div class="container">
+        <h2>Add a book</h2>
+        <form role="form">
+            <div class="form-group">
+                <label for="bookname">Name:</label>
+                <input type="text" class="form-control" id="bookname" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="dsc">Author:</label>
+                <input type="text" class="form-control" id="author" placeholder="Enter author">
+            </div>
+            <div class="form-group">
+                <label for="dsc">Description:</label>
+                <input type="text" class="form-control" id="dsc" placeholder="Enter description">
+            </div>
+            <div class="form-group">
+                <label for="dsc">Link to PDF:</label>
+                <input type="text" class="form-control" id="link" placeholder="Enter link">
+            </div>
+            <button type="submit" class="btn btn-success">Add to library</button>
+        </form>
+    </div>
+    <br/>
+    <div class="container">
+        <div class="list-group">
+            <a href="#" class="list-group-item active">
+                <span class="badge">12</span>
+                <h4 class="list-group-item-heading">First List Group Item Heading</h4>
+                <p class="list-group-item-text">List Group Item Text</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <span class="badge">12</span>
+                <h4 class="list-group-item-heading">Second List Group Item Heading</h4>
+                <p class="list-group-item-text">List Group Item Text</p>
+            </a>
+        </div>
+    </div>
+    {{/if}}
+
+</template>
