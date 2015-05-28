@@ -1,12 +1,13 @@
 if (Meteor.isClient) {
     Session.set("isError", false);
-    var createBook = function (description, title, author, link) {
-        if (description && title && author && link && link.substr(link.length - 4) === ".pdf") {
+    var createBook = function (description, title, author, link, tags) {
+        if (description && title && author && link && tags && link.substr(link.length - 4) === ".pdf", tags.length > 0) {
             Books.insert({
                 description: description,
                 title: title,
                 author: author,
                 link: link,
+                tags: tags,
                 userId: Meteor.userId(),
                 downloads: 0,
                 warnings: 0,
@@ -23,7 +24,12 @@ if (Meteor.isClient) {
         },
         isError: function () {
             return Session.get("isError");
-        }
+        },
+        myBooks: function () {
+            return Books.find({
+                userId: Meteor.userId()
+            }).fetch();
+        },
     });
 
     Template.myTemplate.events({
@@ -34,7 +40,14 @@ if (Meteor.isClient) {
             var author = event.target.author.value;
             var description = event.target.dsc.value;
             var link = event.target.link.value;
-            createBook(description, title, author, link);
+            var tags = event.target.tags.value.split(' ');
+
+            var titleSplitted = title.split(' ');
+            var authorsSplitted = title.split(' ');
+            tags = tags.concat(titleSplitted);
+            tags = tags.concat(authorsSplitted);
+
+            createBook(description, title, author, link, tags);
             return false;
         }
     });

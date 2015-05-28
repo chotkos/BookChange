@@ -1,0 +1,11 @@
+<template name="myBookListItem">
+    <a class="list-group-item">
+        <span class="badge badge-success">{{downloads}}</span>
+        <span class="badge badge-error">{{warnings}}</span>
+
+        <h4 class="list-group-item-heading "><i>{{title}}</i> - {{author}}</h4>
+        <p class="list-group-item-text ">{{description}}</p>
+        <button type="submit" id="download" class="btn btn-success">Download</button>
+        <button type="submit" id="remove" class="btn btn-danger">Remove</button>
+    </a>
+</template>
