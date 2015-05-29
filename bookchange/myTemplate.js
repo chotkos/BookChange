@@ -45,7 +45,7 @@ if (Meteor.isClient) {
             var tags = event.target.tags.value.split(' ');
 
             var titleSplitted = title.split(' ');
-            var authorsSplitted = title.split(' ');
+            var authorsSplitted = author.split(' ');
             tags = tags.concat(titleSplitted);
             tags = tags.concat(authorsSplitted);
 

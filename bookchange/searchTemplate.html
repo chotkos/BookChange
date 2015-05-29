@@ -2,26 +2,17 @@
     {{#if isActive}}
     <div class="container">
         <h2>Find a book</h2>
-        <div class="input-group">
-            <form role="form" class="form-search">
-                <input type="text" class="form-control input-medium search-query" id="bookname" placeholder="Enter title">
+        <form role="form" class="form-inline">
+            <div class="form-group">
+                <input type="text" class="input form-control input-large" id="bookname" placeholder="What are you looking for?">
                 <button type="submit" class="btn btn-success ">Search</button>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
     <br/>
     <div class="container">
         <div class="list-group">
-            <a href="#" class="list-group-item active">
-                <span class="badge">12</span>
-                <h4 class="list-group-item-heading">First List Group Item Heading</h4>
-                <p class="list-group-item-text">List Group Item Text</p>
-            </a>
-            <a href="#" class="list-group-item">
-                <span class="badge">12</span>
-                <h4 class="list-group-item-heading">Second List Group Item Heading</h4>
-                <p class="list-group-item-text">List Group Item Text</p>
-            </a>
+            {{#each allBooks}} {{> myBookListItem}} {{/each}}
         </div>
     </div>
     {{/if}}
