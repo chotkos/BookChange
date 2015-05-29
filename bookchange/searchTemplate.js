@@ -17,7 +17,7 @@ if (Meteor.isClient) {
             if (texts && texts[0] != "") {
                 Session.set("searchCriteria", {
                     tags: {
-                        $all: texts
+                        $in: texts
                     }
                 });
             } else {
