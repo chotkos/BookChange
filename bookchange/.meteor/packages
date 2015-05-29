@@ -9,3 +9,4 @@ insecure
 accounts-ui
 accounts-password
 bootstrap3:tooltips@=3.2.0_2
+mizzao:bootstrap-3
