@@ -1,6 +1,4 @@
 if (Meteor.isClient) {
-    Session.set("activeMenu", "searchClass");
-
     Template.headerTemplate.helpers({
         searchClass: function () {
             return Session.get("activeMenu") == "searchClass" ? "active" : "";
