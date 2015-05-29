@@ -8,9 +8,15 @@ binary-heap@1.0.3
 blaze@2.1.2
 blaze-tools@1.0.3
 boilerplate-generator@1.0.3
+bootstrap3:base@3.2.0_2
+bootstrap3:component-animations@3.2.0_2
+bootstrap3:normalize@3.2.0_2
+bootstrap3:scaffolding@3.2.0_2
+bootstrap3:tooltips@3.2.0_2
+bootstrap3:transitions@3.2.0_2
+bootstrap3:utilities@3.2.0_2
 callback-hook@1.0.3
 check@1.0.5
-coffeescript@1.0.6
 ddp@1.1.0
 deps@1.0.7
 ejson@1.0.6
@@ -29,7 +35,6 @@ less@1.0.14
 livedata@1.0.13
 localstorage@1.0.3
 logging@1.0.7
-lookback:tooltips@0.3.2
 meteor@1.1.6
 meteor-platform@1.2.2
 minifiers@1.1.5

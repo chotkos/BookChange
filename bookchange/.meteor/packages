@@ -8,4 +8,4 @@ meteor-platform
 insecure
 accounts-ui
 accounts-password
-lookback:tooltips
+bootstrap3:tooltips@=3.2.0_2

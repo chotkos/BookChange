@@ -8,6 +8,7 @@ if (Meteor.isClient) {
                 author: author,
                 link: link,
                 tags: tags,
+                reportants: [],
                 userId: Meteor.userId(),
                 downloads: 0,
                 warnings: 0,
@@ -34,8 +35,9 @@ if (Meteor.isClient) {
 
     Template.myTemplate.events({
         'submit form': function (event) {
-            Session.set("isError", false);
             event.preventDefault();
+            Session.set("isError", false);
+
             var title = event.target.title.value;
             var author = event.target.author.value;
             var description = event.target.dsc.value;
