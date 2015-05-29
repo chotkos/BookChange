@@ -2,7 +2,7 @@ Books = new Mongo.Collection("books");
 
 if (Meteor.isClient) {
     Meteor.subscribe("books");
-    Session.set("activeMenu", "searchClass");
+    Session.set("activeMenu", "contactClass");
 }
 
 if (Meteor.isServer) {

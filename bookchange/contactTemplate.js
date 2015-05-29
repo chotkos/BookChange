@@ -4,11 +4,5 @@ if (Meteor.isClient) {
             return (Session.get("activeMenu") === "contactClass");
         }
     });
-
-    /*
-        Template.contactTemplate.events({
-            'click button': function () {
-                //search this
-            }
-        });*/
 }
+

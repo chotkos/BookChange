@@ -43,10 +43,10 @@ if (Meteor.isClient) {
             var description = event.target.dsc.value;
             var link = event.target.link.value;
             //TODO REFACTOR FOR MANY SEPARATORS BY REGEX!
-            var tags = event.target.tags.value.toLowerCase().split(' ');
+            var tags = event.target.tags.value.toLowerCase().split('/[ ,]+/');
 
-            var titleSplitted = title.toLowerCase().split(' ');
-            var authorsSplitted = author.toLowerCase().split(' ');
+            var titleSplitted = title.toLowerCase().split('/[ ,]+/');
+            var authorsSplitted = author.toLowerCase().split('/[ ,]+/');
             tags = tags.concat(titleSplitted);
             tags = tags.concat(authorsSplitted);
 
