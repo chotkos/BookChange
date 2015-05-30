@@ -13,7 +13,7 @@ if (Meteor.isClient) {
     Template.searchTemplate.events({
         'submit form': function (event) {
             event.preventDefault();
-            var texts = event.target.bookname.value.toLowerCase().split('/[ ,]+/');
+            var texts = event.target.bookname.value.toLowerCase().split(/[\s,\s(\s)\s.\s?]+/);
             if (texts && texts[0] != "") {
                 Session.set("searchCriteria", {
                     tags: {

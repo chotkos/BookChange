@@ -1,7 +1,9 @@
 if (Meteor.isClient) {
     Session.set("isError", false);
+    Session.set("justAdded", false);
+
     var createBook = function (description, title, author, link, tags) {
-        if (description && title && author && link && tags && link.substr(link.length - 4) === ".pdf", tags.length > 0) {
+        if (description.length > 0 && title.length > 0 && author.length > 0 && link.length > 0 && tags.length > 0 && link.substr(link.length - 4) === ".pdf" && tags.length > 0) {
             Books.insert({
                 description: description,
                 title: title,
@@ -13,8 +15,12 @@ if (Meteor.isClient) {
                 downloads: 0,
                 warnings: 0,
             });
+            Session.set("justAdded", true);
+            Session.set("isError", false);
+
         } else {
             //wyświetl warning
+            Session.set("justAdded", false);
             Session.set("isError", true);
         }
     };
@@ -25,6 +31,9 @@ if (Meteor.isClient) {
         },
         isError: function () {
             return Session.get("isError");
+        },
+        justAdded: function () {
+            return Session.get("justAdded");
         },
         myBooks: function () {
             return Books.find({
@@ -43,11 +52,10 @@ if (Meteor.isClient) {
             var description = event.target.dsc.value;
             var link = event.target.link.value;
             //TODO REFACTOR FOR MANY SEPARATORS BY REGEX!
-            var regex = '/[ ,]+/';
-            var tags = event.target.tags.value.toLowerCase().split(regex);
+            var tags = event.target.tags.value.toLowerCase().split(/[\s,\s(\s)\s.\s?]+/);
 
-            var titleSplitted = title.toLowerCase().split(regex);
-            var authorsSplitted = author.toLowerCase().split(regex);
+            var titleSplitted = title.toLowerCase().split(/[\s,\s(\s)\s.\s?]+/);
+            var authorsSplitted = author.toLowerCase().split(/[\s,\s(\s)\s.\s?]+/);
             tags = tags.concat(titleSplitted);
             tags = tags.concat(authorsSplitted);
 
