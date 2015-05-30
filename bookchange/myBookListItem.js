@@ -5,12 +5,12 @@ if (Meteor.isClient) {
             return this.userId === Meteor.userId();
         },
         wasNotReportedByUser: function () {
-            var res = false;
+            var res = true;
             for (i = 0; i < this.reportants.length; i++) {
-                if (this.reportants[i].userId === Meteor.userId())
-                    res = true;
+                if (this.reportants[i] === Meteor.userId())
+                    res = false;
             }
-            return !res;
+            return res;
         }
     });
 
