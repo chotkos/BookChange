@@ -36,6 +36,16 @@ if (Meteor.isClient) {
             Session.set("activeMenu", "contactClass");
             return false;
         },
+        'click .en': function (event) {
+            event.preventDefault();
+            Session.set("language", "en");
+            return false;
+        },
+        'click .pl': function (event) {
+            event.preventDefault();
+            Session.set("language", "pl");
+            return false;
+        },
     });
 
 }
