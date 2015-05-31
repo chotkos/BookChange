@@ -1,7 +1,7 @@
 <template name="allBooksTemplate">
     {{#if isActive}}
     <div class="container">
-        <h2>All books</h2>
+        <h2>{{> languageDictionaryValue key="All books"}}</h2>
         <div class="list-group">
             {{#each allBooks}} {{> myBookListItem}} {{/each}}
         </div>

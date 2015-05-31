@@ -12,13 +12,13 @@
             <div class="collapse navbar-collapse">
                 {{#if currentUser}}
                 <ul class="nav navbar-nav">
-                    <li class="{{searchClass}} find"><a href="#find">Search</a>
+                    <li class="{{searchClass}} find"><a href="#find">{{> languageDictionaryValue key="Search"}}</a>
                     </li>
-                    <li class="{{allClass}} all"><a href="#all">All books</a>
+                    <li class="{{allClass}} all"><a href="#all">{{> languageDictionaryValue key="All books"}}</a>
                     </li>
-                    <li class="{{myClass}} my"><a href="#my">My books</a>
+                    <li class="{{myClass}} my"><a href="#my">{{> languageDictionaryValue key="My books"}}</a>
                     </li>
-                    <li class="{{contactClass}} contact"><a href="#contact">About</a>
+                    <li class="{{contactClass}} contact"><a href="#contact">{{> languageDictionaryValue key="About"}}</a>
                     </li>
                     <li class="en"><a href="#contact">EN</a>
                     </li>
