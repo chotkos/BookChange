@@ -23,7 +23,7 @@ if (Meteor.isClient) {
 
     if (LangDict.find({}).fetch().length === 0) {
         var texts = [dictValueCreator("pl", "Contact us!", "Poznaj nas")];
-        _.each(names, function (doc) {
+        _.each(texts, function (doc) {
             LangDict.insert(doc);
         })
     }
