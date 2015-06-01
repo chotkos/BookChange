@@ -36,6 +36,15 @@ if (Meteor.isClient) {
                      dictValueCreator("pl", "Link to PDF:", "Link do PDFa"),
                      dictValueCreator("pl", "Tags:", "Tagi"),
                      dictValueCreator("pl", "Add to library", "Dodaj do biblioteki"),
+                     dictValueCreator("pl", "Enter tags separated by spaces", "Wpisz tagi oddzielne spacjami"),
+                     dictValueCreator("pl", "Enter link", "Podaj link"),
+                     dictValueCreator("pl", "Enter description", "Podaj opis"),
+                     dictValueCreator("pl", "Enter author", "Podaj autora"),
+                     dictValueCreator("pl", "Enter title", "Podaj tytuł"),
+                     dictValueCreator("pl", "All fields should be filled and file address should and on .pdf!", "Wszystkie pola powinny być uzupełnione a adres pliku kończyć się na .pdf !"),
+                     dictValueCreator("pl", "Book has been added!", "Książka została dodana!" ),
+                    
+                     
             ];
     if (LangDict.find({}).fetch().length < texts.length) {
         //LangDict.remove({}); cant on client side
