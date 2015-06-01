@@ -43,10 +43,10 @@ if (Meteor.isClient) {
                      dictValueCreator("pl", "Enter title", "Podaj tytuł"),
                      dictValueCreator("pl", "All fields should be filled and file address should and on .pdf!", "Wszystkie pola powinny być uzupełnione a adres pliku kończyć się na .pdf !"),
                      dictValueCreator("pl", "Book has been added!", "Książka została dodana!" ),
-                    
+                     dictValueCreator("pl", "Find a book","Znajdź książkę"),
                      
             ];
-    if (LangDict.find({}).fetch().length < texts.length) {
+    if (LangDict.find({}).fetch().length != texts.length) {
         //LangDict.remove({}); cant on client side
         _.each(texts, function (doc) {
             LangDict.insert(doc);
