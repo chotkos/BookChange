@@ -5,35 +5,35 @@
         <form role="form">
             <div class="form-group">
                 <label for="title">{{> languageDictionaryValue key="Title:"}}</label>
-                <input type="text" class="form-control" id="title" placeholder="Enter title">
+                <input type="text" class="form-control" id="title" placeholder="{{> languageDictionaryValue key='Enter title'}}">
             </div>
             <div class="form-group">
                 <label for="dsc">{{> languageDictionaryValue key="Author:"}}</label>
-                <input type="text" class="form-control" id="author" placeholder="Enter author">
+                <input type="text" class="form-control" id="author" placeholder="{{> languageDictionaryValue key='Enter author'}}">
             </div>
             <div class="form-group">
                 <label for="dsc">{{> languageDictionaryValue key="Description:"}}</label>
-                <input type="text" class="form-control" id="dsc" placeholder="Enter description">
+                <input type="text" class="form-control" id="dsc" placeholder="{{> languageDictionaryValue key='Enter description'}}">
             </div>
             <div class="form-group">
                 <label for="dsc">{{> languageDictionaryValue key="Link to PDF:"}}</label>
-                <input type="text" class="form-control" id="link" placeholder="Enter link">
+                <input type="text" class="form-control" id="link" placeholder="{{> languageDictionaryValue key='Enter link'">
             </div>
             <div class="form-group">
                 <label for="tags">{{>languageDictionaryValue key="Tags:"}}</label>
-                <input type="text" class="form-control" id="tags" placeholder="Enter tags separated by spaces">
+                <input type="text" class="form-control" id="tags" placeholder="{{> languageDictionaryValue key='Enter tags separated by spaces'}}">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-success">{{> languageDictionaryValue key="Add to library"}}</button>
             </div>{{#if isError}}
             <div class="form-group">
                 <div class="alert alert-danger">
-                    <strong>{{> languageDictionaryValue key="Wszystkie pola powinny być uzupełnione a adres pliku kończyć się na .pdf !"}}</strong>
+                    <strong>{{> languageDictionaryValue key="All fields should be filled and file address should and on .pdf!"}}</strong>
                 </div>
             </div>{{/if}} {{#if justAdded}}
             <div class="form-group">
                 <div class="alert alert-success">
-                    <strong>{{> languageDictionaryValue key="Książka została dodana!"}}</strong>
+                    <strong>{{> languageDictionaryValue key="Book has been added!"}}</strong>
                 </div>
             </div>{{/if}}
         </form>
