@@ -32,10 +32,10 @@ if (Meteor.isClient) {
                      dictValueCreator("pl", "Add a book", "Dodaj książkę"),
                      dictValueCreator("pl", "Title:", "Tytuł"),
                      dictValueCreator("pl", "Author:", "Autor:"),
-                     dictValueCreator("pl", "Description:", "Wszystkie książki"),
-                     dictValueCreator("pl", "Link to PDF:", "Wszystkie książki"),
-                     dictValueCreator("pl", "Tags:", "Wszystkie książki"),
-                     dictValueCreator("pl", "Add to library", "Wszystkie książki"),
+                     dictValueCreator("pl", "Description:", "Opis"),
+                     dictValueCreator("pl", "Link to PDF:", "Link do PDFa"),
+                     dictValueCreator("pl", "Tags:", "Tagi"),
+                     dictValueCreator("pl", "Add to library", "Dodaj do biblioteki"),
             ];
     if (LangDict.find({}).fetch().length < texts.length) {
         //LangDict.remove({}); cant on client side
