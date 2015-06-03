@@ -13,6 +13,10 @@ if (Meteor.isClient) {
         }
     });
 
+}
+
+if (Meteor.isServer) {
+
     var dictValueCreator = function (lang, key, val) {
         return {
             language: lang,
@@ -46,11 +50,11 @@ if (Meteor.isClient) {
                      dictValueCreator("pl", "Find a book","Znajdź książkę"),
                      
             ];
+
     if (LangDict.find({}).fetch().length != texts.length) {
-        //LangDict.remove({}); cant on client side
+        LangDict.remove({}); //cant on client side
         _.each(texts, function (doc) {
             LangDict.insert(doc);
         });
     }
-
 }
