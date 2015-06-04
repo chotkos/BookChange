@@ -39,11 +39,13 @@ if (Meteor.isClient) {
         'click .en': function (event) {
             event.preventDefault();
             Session.set("language", "en");
+            localStorage.setItem("bclang", "en");
             return false;
         },
         'click .pl': function (event) {
             event.preventDefault();
             Session.set("language", "pl");
+            localStorage.setItem("bclang", "pl");
             return false;
         },
     });

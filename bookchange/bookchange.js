@@ -6,8 +6,13 @@ if (Meteor.isClient) {
     Meteor.subscribe("langs");
 
     Session.set("activeMenu", "contactClass");
-    if (!Session.get("language"))
+    var localStorageLang = localStorage.getItem("bclang");
+    if (!localStorageLang) {
         Session.set("language", "en");
+        localStorage.setItem("bclang", "en");
+    } else {
+        Session.set("language", localStorageLang);
+    }
 
 }
 
