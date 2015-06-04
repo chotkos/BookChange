@@ -59,3 +59,7 @@ body {
 .badge-inverse:hover {
     background-color: #1a1a1a!important;
 }
+
+.login-dropdown-list {
+    z-index: 1000;
+}
