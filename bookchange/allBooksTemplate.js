@@ -4,7 +4,11 @@ if (Meteor.isClient) {
             return (Session.get("activeMenu") === "allClass");
         },
         allBooks: function () {
-            return Books.find({}).fetch();
+            return Books.find({}, {
+                sort: {
+                    downloads: -1
+                }
+            }).fetch();
         }
     });
 }

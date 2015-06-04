@@ -5,7 +5,11 @@ if (Meteor.isClient) {
             return (Session.get("activeMenu") === "searchClass");
         },
         allBooks: function () {
-            return Books.find(Session.get("searchCriteria")).fetch();
+            return Books.find(Session.get("searchCriteria"), {
+                sort: {
+                    downloads: -1
+                }
+            }).fetch();
         }
     });
 
