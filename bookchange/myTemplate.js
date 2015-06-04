@@ -38,6 +38,10 @@ if (Meteor.isClient) {
         myBooks: function () {
             return Books.find({
                 userId: Meteor.userId()
+            }, {
+                sort: {
+                    warnings: -1
+                }
             }).fetch();
         },
     });
