@@ -46,9 +46,10 @@ if (Meteor.isServer) {
                      dictValueCreator("pl", "Enter author", "Podaj autora"),
                      dictValueCreator("pl", "Enter title", "Podaj tytuł"),
                      dictValueCreator("pl", "All fields should be filled and file address should and on .pdf!", "Wszystkie pola powinny być uzupełnione a adres pliku kończyć się na .pdf !"),
-                     dictValueCreator("pl", "Book has been added!", "Książka została dodana!" ),
-                     dictValueCreator("pl", "Find a book","Znajdź książkę"),
-                     
+                     dictValueCreator("pl", "Book has been added!", "Książka została dodana!"),
+                     dictValueCreator("pl", "Find a book", "Znajdź książkę"),
+                     dictValueCreator("pl", "This website uses Cookies! You are accepting storing some necessary data on your pc when using this website!", "Ta strona wykorzystuje ciasteczka! Używając jej akceptujesz przechowywanie niezbędnych do pracy danych na swoim komputerze!"),
+
             ];
 
     if (LangDict.find({}).fetch().length != texts.length) {

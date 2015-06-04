@@ -6,7 +6,8 @@ if (Meteor.isClient) {
     Meteor.subscribe("langs");
 
     Session.set("activeMenu", "contactClass");
-    Session.set("language", "en");
+    if (!Session.get("language"))
+        Session.set("language", "en");
 
 }
 
