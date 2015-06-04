@@ -1,20 +1,3 @@
-if (Meteor.isClient) {
-    Template.languageDictionaryValue.helpers({
-        result: function () {
-            var x = LangDict.find({
-                language: Session.get("language"),
-                key: this.key
-            }).fetch();
-            if (x.length > 0) {
-                return x[0].value
-            } else {
-                return this.key;
-            }
-        }
-    });
-
-}
-
 if (Meteor.isServer) {
 
     var dictValueCreator = function (lang, key, val) {
