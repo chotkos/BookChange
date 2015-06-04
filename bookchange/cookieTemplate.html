@@ -1,7 +1,12 @@
 <template name="cookieTemplate">
-    <div class="form-group">
-        <div class="alert alert-success">
-            <strong>{{> languageDictionaryValue key="This website uses Cookies! You are accepting storing some necessary data on your pc when using this website!"}}</strong>
+    {{#if isCookieTemplateVisible}}
+    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="form-group">
+            <div class="alert alert-success text-center">
+                <strong>{{> languageDictionaryValue key="This website uses Cookies! You are accepting storing some necessary data on your pc when using this website!"}}</strong>
+                <br/>
+                <button type="submit" class="btn btn-success">{{> languageDictionaryValue key="I understand"}}</button>
+            </div>
         </div>
-    </div>
+    </div>{{/if}}
 </template>
