@@ -63,3 +63,16 @@ body {
 .login-dropdown-list {
     z-index: 1000;
 }
+
+.navbar {
+    background-color: #0A093B;
+}
+/*
+.active {
+    color: #1B1A59!important;
+    background-color: #1B1A59!important;
+}*/
+
+body {
+    background-color: #BCD9EE;
+}
